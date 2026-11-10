@@ -32,10 +32,11 @@ Fase X/
 
 ## GitHub e revisão
 
-- Criar branches próprias para alterações em documentação e `.dax`. Para Stephanne, preferir `steph/` quando possível; enquanto existir a branch `steph`, que impede esse prefixo, usar `steph-`.
+- Criar branches próprias para alterações em documentação e `.dax`.
 - Apresentar as alterações propostas para revisão antes de commitar.
 - Abrir Pull Request e revisar antes do merge em `main`.
-- Usar Issues para checklists e dependências. Conferir o trabalho no `.pbix` ou arquivo pertinente; não exigir prints rotineiros.
+- Usar Issues para registrar checklists, dependências e critérios de conclusão.
+- **Revisão das tarefas:** o revisor deve percorrer todos os itens do checklist e verificar se o critério de conclusão foi atendido. A conferência pode ser feita diretamente no `.pbix`, no DAX, na documentação ou no Drive, conforme a tarefa. Prints só são necessários quando agregarem valor; os registros de publicação ficam na entrega.
 
 ## Entrega oficial
 
