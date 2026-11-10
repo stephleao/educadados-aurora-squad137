@@ -59,6 +59,8 @@ Fluxo de trabalho sugerido: **Backlog → A fazer → Em andamento → Em revis�
 
 Evitar a edição simultânea do mesmo arquivo PBIX. Arquivos de dados e relatórios Power BI são compartilhados em armazenamento externo, conforme as permissões definidas pela equipe.
 
+**Guia de colaboração:** consulte [`GUIA_COLABORACAO.md`](GUIA_COLABORACAO.md) para regras de nomenclatura, versões de `.pbix` no Drive, integração individual e revisão via Pull Request.
+
 ## Organização dos arquivos
 
 ### GitHub
