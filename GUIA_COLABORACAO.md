@@ -36,7 +36,15 @@ Fase X/
 - Apresentar as alterações propostas para revisão antes de commitar.
 - Abrir Pull Request e revisar antes do merge em `main`.
 - Usar Issues para registrar checklists, dependências e critérios de conclusão.
-- **Revisão das tarefas:** o revisor deve percorrer todos os itens do checklist e verificar se o critério de conclusão foi atendido. A conferência pode ser feita diretamente no `.pbix`, no DAX, na documentação ou no Drive, conforme a tarefa. Prints só são necessários quando agregarem valor; os registros de publicação ficam na entrega.
+### Revisão das tarefas
+
+- Quem desenvolve uma tarefa implementa, testa e integra sua contribuição.
+- **A revisão deve ser feita por outro integrante**. Preferencialmente, por quem assumirá a próxima tarefa dependente; se for a mesma pessoa ou não houver tarefa seguinte, escolher outra pessoa.
+- O revisor percorre **todos os itens do checklist** e verifica se o **critério de conclusão** foi atendido, consultando diretamente o `.pbix`, DAX, documentação ou Drive.
+- Se houver problemas, devolver a tarefa para correção e revisar novamente depois.
+- **Mover a tarefa para `Concluído` significa que a conferência foi realizada e aprovada.** Não é necessário deixar comentário de aprovação na Issue.
+- Prints de rotina não são obrigatórios; registros de publicação ficam na entrega, quando pertinentes.
+- O `Assignees` identifica quem executa a tarefa. A definição de como registrar o revisor será acordada pela equipe, sem misturar as duas responsabilidades.
 
 ## Entrega oficial
 
