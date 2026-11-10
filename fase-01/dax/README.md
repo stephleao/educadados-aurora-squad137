@@ -11,4 +11,4 @@ Esta pasta reúne as medidas DAX documentadas durante a Fase 1, preservadas como
 
 A formatação condicional da tabela de serviços foi configurada nos visuais do PBIX, sem medidas DAX adicionais de cor.
 
-Consultar [regras de negócio](../docs/regras-de-negocio.md) e [fechamento da Fase 1](../docs/fechamento-fase-01.md).
+Consultar [regras de negócio](../regras-de-negocio.md) e [fechamento da Fase 1](../fechamento-fase-01.md).
