@@ -1,10 +1,14 @@
-# Medidas DAX
+# Medidas DAX — Painel Aurora
 
-Guardar fórmulas **testadas** em arquivos de texto nesta pasta, com comentários contendo finalidade, tabela, contexto de filtro e responsável. Os arquivos de medidas serão adicionados durante o desenvolvimento, não são fórmulas prontas.
+Esta pasta reúne as medidas DAX documentadas durante a Fase 1, preservadas como referência para a continuidade do projeto pela Squad 137.
 
-Sugestão:
-- `medidas-base.dax` — líquido, número de vendas, bruto dos itens, quantidade de itens.
-- `metas.dax` — metas por nível e consolidadas.
-- `indicadores.dax` — atingimento, “sem meta”, status e rótulos.
+- `medidas-base.dax` — valor líquido, número de vendas, valor bruto e quantidade de itens.
+- `metas.dax` — metas por nível e metas consolidadas por filial, cidade e rede.
+- `indicadores.dax` — percentuais de atingimento, status, cores e rótulo combinado.
+- `exibicao.dax` — medidas textuais para mostrar "sem meta" na tabela de serviços.
 
-**Não copiar medidas diretamente sem testar o contexto de filtro.** Consultar [regras de negócio](../docs/regras-de-negocio.md).
+**Atenção:** as medidas dependem do modelo e do contexto de filtros do Power BI. Validar cada fórmula antes de reutilizar ou adaptar para a Fase 2, especialmente nos cortes de grupo de serviço e serviço.
+
+A formatação condicional da tabela de serviços foi configurada nos visuais do PBIX, sem medidas DAX adicionais de cor.
+
+Consultar [regras de negócio](../docs/regras-de-negocio.md) e [fechamento da Fase 1](../docs/fechamento-fase-01.md).
