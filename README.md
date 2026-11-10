@@ -24,19 +24,11 @@ A Fase 1 inclui um relatório comercial com até duas páginas, contendo:
 
 ### Fase 2 — Atingimento, orçamentos e composição das vendas
 
-**Período:** 08/11/2026 a 23/11/2026  
-**Prazo de entrega:** 23/11/2026 às 23h59 (Brasília)  
-**Situação:** em desenvolvimento pela Squad 137.
+**Situação:** em desenvolvimento · **Entrega planejada:** 22/11/2026 · **Prazo oficial:** 23/11/2026, às 23h59 (Brasília).
 
-Conforme o enunciado da Fase 2, o relatório deve incorporar:
-- Atingimento de metas de **valor e quantidade separadamente**, com faixas abaixo de 90%, de 90% a 99% e de 100% ou mais;
-- Filiais que atingiram apenas uma das duas metas;
-- Funil de orçamentos (gerados, aprovados e perdidos), taxa de conversão por filial, desconto médio ponderado e valor perdido;
-- Matriz hierárquica **grupo de serviço > serviço**, com participação no total da rede e dentro do grupo;
-- Segmentações por ano, mês e filial;
-- Página de alerta para ausência de metas cadastradas em 2026.
+Continuidade do painel comercial, com metas separadas de valor e quantidade, análise de orçamentos e participação dos grupos e serviços.
 
-A base da Fase 2 reutiliza os 11 arquivos da Fase 1 e acrescenta `orcamentos.xlsx`. As validações e medidas novas devem seguir o dicionário de dados e o enunciado da Fase 2.
+[Escopo, fontes e documentos da Fase 2](fase-02/README.md) · [Planejamento](fase-02/planejamento-fase-02.md)
 
 ## Equipe — Squad 137
 
@@ -112,7 +104,7 @@ O GitHub guarda documentação, DAX e histórico de alterações; o Drive guarda
 
 ### Fase 2 — fontes do desafio
 
-- **Enunciado:** `Desafio_Fase_2.md` (fonte disponibilizada no projeto de estudos).
+- **Enunciado:** [Desafio Fase 2](https://aulas.educadados.com.br/bootcamp/fases/2).
 - **Referência de estrutura e relacionamentos:** `00_dicionario_de_dados.xlsx`.
 - [Pasta oficial de dados do desafio](https://drive.google.com/drive/folders/1r67J4QuS4i4EjbVqPbyy0Vq4AzsKZgd8)
 - [Manual visual da Rede Aurora no Figma](https://www.figma.com/design/RlCb3g2x0Ul6qalctSH0HV/Rede-Aurora-Odontologia-%E2%80%94-Logo?node-id=0-1&p=f)
