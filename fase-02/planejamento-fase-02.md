@@ -76,8 +76,8 @@ A Fase 2 reutiliza os 11 arquivos da Fase 1 e acrescenta `orcamentos.xlsx`. Outr
 | 11/11 (quarta), à noite | Reunião para definir responsáveis, esforço e horários de integração | — |
 | 12–13/11 (quinta–sexta) | Importação de `orcamentos`, modelo, revisão de medidas herdadas e investigação dos filtros | `F02-01` a `F02-04` |
 | 14–17/11 (sábado–terça) | Medidas DAX de atingimento, faixas, conversão, desconto, valor perdido e participação, em frentes paralelas | `F02-05` a `F02-11` |
-| 18–20/11 (quarta–sexta) | Construir matrizes, cartões, funil, gráfico, alerta e segmentações; integrar e conferir todas as contribuições no `.pbix` | `F02-12` a `F02-19` |
-| 21/11 (sábado) | Validar no painel as cinco perguntas de setembro/2026, executar testes gerais, corrigir defeitos e repetir os testes necessários | `F02-20` e `F02-21` |
+| 18–20/11 (quarta–sexta) | Construir e finalizar matrizes, cartões, funil, gráfico, alerta e segmentações; cada integrante testa e integra sua própria contribuição durante o desenvolvimento | `F02-12` a `F02-18` |
+| 21/11 (sábado) | Fazer a integração final e conferência coletiva do `.pbix`; validar as cinco perguntas de setembro/2026, executar testes gerais, corrigir defeitos e repetir os testes necessários | `F02-19`, `F02-20` e `F02-21` |
 | 22/11 (domingo) | Publicar o relatório, salvar o `.pbix` final no Google Drive, testar ambos os links em janela anônima e enviar a entrega | `F02-22` e `F02-23` |
 | 23/11 (segunda) | Prazo oficial; usar apenas como contingência se houver impedimentos no dia 22 | — |
 
@@ -87,13 +87,13 @@ A `F02-24` (documentação técnica) será realizada progressivamente e finaliza
 
 - **13/11:** `F02-01` a `F02-04` — 4 Issues, 12 pontos acumulados.
 - **17/11:** `F02-05` a `F02-11` — 11 Issues, 33 pontos acumulados.
-- **20/11:** `F02-12` a `F02-19` — 19 Issues, 52 pontos acumulados.
-- **21/11:** `F02-20`, `F02-21` e `F02-24` — 22 Issues, 59 pontos acumulados.
+- **20/11:** `F02-12` a `F02-18` — 18 Issues, 50 pontos acumulados.
+- **21/11:** `F02-19`, `F02-20`, `F02-21` e `F02-24` — 22 Issues, 59 pontos acumulados.
 - **22/11:** `F02-22` e `F02-23` — 24 Issues, 64 pontos acumulados.
 
 Os pontos representam esforço relativo, não horas. As equipes podem antecipar visuais assim que suas medidas forem validadas, sem esperar o início formal da etapa seguinte.
 
-**Risco do cronograma:** a validação e as correções compartilham o dia 21. Por isso, cada integrante deve testar suas medidas e visuais durante o desenvolvimento; problemas grandes descobertos no fim podem exigir a contingência de 23/11.
+**Risco do cronograma:** a conferência da integração final, a validação e as correções compartilham o dia 21. Por isso, cada integrante deve integrar e testar suas medidas e visuais durante o desenvolvimento; no sábado, a equipe revisa o conjunto e resolve inconsistências. Problemas grandes descobertos no fim podem exigir a contingência de 23/11.
 
 **Dependências que podem atrasar a entrega:**
 
