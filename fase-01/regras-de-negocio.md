@@ -1,6 +1,6 @@
-# Regras de negócio — Fase 01
+# Regras de negócio — Fase 1
 
-A fonte destas regras é o enunciado do Desafio Fase 1 e a descrição da base de dados da Educadados.
+Referência: enunciado do Desafio Fase 1 e descrição da base Educadados. **Não confundir número de vendas com quantidade de itens, nem valor líquido das vendas com valor bruto dos itens.**
 
 | Corte | Valor realizado | Quantidade realizada | Regra da meta |
 |---|---|---|---|
@@ -12,21 +12,19 @@ A fonte destas regras é o enunciado do Desafio Fase 1 e a descrição da base d
 | Grupo de serviço | `itens_venda[valor_total]` (bruto) | Soma de `itens_venda[quantidade]` | Nível **Produto** |
 | Serviço | Valor bruto dos itens | Quantidade de itens | Nível **Serviço** |
 
-## Cuidados indispensáveis
-- **Valor líquido** = bruto da venda menos desconto. **Valor bruto dos itens** não tem desconto rateado.
-- **Número de vendas** (códigos distintos da tabela vendas) não é **quantidade de itens**.
-- `metas_valor` e `metas_quantidade` possuem níveis independentes Produto, Serviço, Vendedor, Profissional; **não somar níveis entre si**, senão a meta duplica.
-- Para filiais: valor da meta = soma do nível Produto; quantidade da meta = soma do nível Vendedor.
-- Para rede e cidade: meta = soma das filiais.
-- Serviço ou grupo sem meta: exibir **“sem meta”**, nunca 0%. Não transformar ausência de meta em meta zero.
-- Manter medidas **numéricas** para percentuais, cores e gráficos; pode haver medida de exibição textual separada.
-- Dados de vendas de **01/01/2024 a 30/09/2026**; metas futuras até dezembro de 2026 não implicam realizado futuro.
+## Cuidados de cálculo
 
-## Perguntas de aprovação (setembro/2026)
-1. Valor líquido da rede e % da meta de valor (uma casa decimal).
-2. Filial líder em valor líquido e % de atingimento.
-3. Cidade líder em **quantidade de vendas**; também é líder em valor líquido?
-4. Entre vendedores com meta de valor, quem tem menor percentual de atingimento?
-5. Grupo de serviço líder por **valor bruto dos itens** e sua participação no bruto total dos itens.
+- O valor líquido considera o desconto da venda; o valor bruto de itens **não** contém desconto rateado.
+- As metas têm quatro níveis independentes (Produto, Serviço, Vendedor e Profissional). **Nunca somar níveis diferentes**, pois isso duplica o objetivo.
+- Meta inexistente deve aparecer como **"sem meta"**, não como 0%; manter medidas numéricas separadas de textos de exibição.
+- As vendas vão de **01/01/2024 a 30/09/2026**. Metas cadastradas até dezembro/2026 não implicam vendas futuras.
 
-As respostas dependem das planilhas reais do desafio: não registrar valores inventados.
+## Perguntas de aprovação — setembro/2026
+
+1. Qual o valor líquido da rede e o percentual da meta de valor (uma casa decimal)?
+2. Qual filial lidera em valor líquido e qual seu percentual de atingimento?
+3. Qual cidade lidera em **número de vendas**? Ela também lidera em valor líquido?
+4. Entre vendedores com meta de valor, quem tem o menor percentual de atingimento?
+5. Qual grupo de serviço lidera em **valor bruto dos itens** e qual sua participação no total bruto?
+
+As respostas dependem das planilhas reais; não registrar valores não validados.
