@@ -1,53 +1,34 @@
 # Guia de colaboração — Painel Aurora | Squad 137
 
-Este guia reúne regras de colaboração reutilizáveis nas fases do bootcamp.
+Regras de trabalho reutilizáveis nas fases do bootcamp.
 
-## Onde guardar os arquivos
+## Arquivos no Drive e no GitHub
 
-- **Google Drive:** planilhas, logomarca e arquivos `.pbix` de trabalho e entrega.
-- **GitHub:** Issues, documentação Markdown e fórmulas `.dax`.
-- Não enviar arquivos `.pbix` ao repositório.
+- **Google Drive:** planilhas, recursos visuais e arquivos `.pbix` de trabalho e de entrega.
+- **GitHub:** Issues, documentação Markdown, medidas `.dax` e Pull Requests. Não enviar `.pbix` para o repositório.
+- Cada fase usa as pastas `01 WIP` (desenvolvimento) e `02 Entrega` (versão final).
+- Nome no WIP: `Aurora_[TAREFA]_[RESPONSÁVEL].pbix`, com `_wip` ou `_incompleto` quando necessário.
+- Nome final: `Aurora_squad_137_fXX_final.pbix` (substituir `XX` pelo número da fase).
+- Manter a versão de trabalho mais recente; antes de apagar versões antigas, confirmar que nenhuma contribuição será perdida.
 
-## Estrutura do Google Drive por fase
+## Desenvolvimento e integração
 
-```text
-Fase X/
-├── 01 WIP/
-└── 02 Entrega/
-```
-
-## Nomes dos arquivos e versões
-
-- Em `01 WIP`: `Aurora_[TAREFA]_[RESPONSÁVEL].pbix`, por exemplo `Aurora_f02_01_steph.pbix`.
-- Acrescentar `_wip` ou `_incompleto` antes de `.pbix` quando ainda não estiver finalizado.
-- Manter somente a versão mais recente ou uma versão incompleta relevante. Antes de excluir uma cópia, confirmar que nenhuma contribuição útil será perdida.
-- Em `02 Entrega`: `Aurora_squad_137_fXX_final.pbix` (substituir `XX` pelo número da fase), junto aos registros de publicação, quando exigidos.
-
-## Responsabilidade de integração
-
-- Quem desenvolve a tarefa também testa e integra sua contribuição no `.pbix` de trabalho.
-- Apenas uma pessoa edita o `.pbix` principal por vez. Combinar horários de edição com a equipe.
-- Antes de editar, confirmar a versão atual; depois de salvar, comunicar onde está a versão atualizada e o que mudou.
-- Integração final significa conferir coletivamente se todas as contribuições foram incorporadas e se o relatório continua funcionando; não transferir toda a integração para uma única pessoa.
+- Quem desenvolve uma tarefa **testa e integra a própria contribuição**.
+- Apenas uma pessoa deve editar o `.pbix` principal por vez; combinar o horário, conferir a versão atual e avisar a equipe após salvar.
+- A conferência final verifica coletivamente se as contribuições foram incorporadas e se o relatório funciona.
 
 ## GitHub e revisão
 
-- Criar branches próprias para alterações em documentação e `.dax`.
-- Apresentar as alterações propostas para revisão antes de commitar.
-- Abrir Pull Request e revisar antes do merge em `main`.
-- Usar Issues para registrar checklists, dependências e critérios de conclusão.
-### Revisão das tarefas
-
-- Quem desenvolve uma tarefa implementa, testa e integra sua contribuição.
-- **A revisão deve ser feita por outro integrante**. Preferencialmente, por quem assumirá a próxima tarefa dependente; se for a mesma pessoa ou não houver tarefa seguinte, escolher outra pessoa.
-- O revisor percorre **todos os itens do checklist** e verifica se o **critério de conclusão** foi atendido, consultando diretamente o `.pbix`, DAX, documentação ou Drive.
-- Se houver problemas, devolver a tarefa para correção e revisar novamente depois.
-- **Mover a tarefa para `Concluído` significa que a conferência foi realizada e aprovada.** Não é necessário deixar comentário de aprovação na Issue.
-- Prints de rotina não são obrigatórios; registros de publicação ficam na entrega, quando pertinentes.
-- O `Assignees` identifica quem executa a tarefa. A definição de como registrar o revisor será acordada pela equipe, sem misturar as duas responsabilidades.
+- Para documentação e `.dax`, trabalhar em branch própria, apresentar alterações para revisão e abrir Pull Request antes de integrar à `main`.
+- Usar `Assignees` para quem desenvolve e **`Revisor` na descrição da Issue** para a pessoa que confere.
+- Preferencialmente, o revisor será quem executará a próxima tarefa dependente. Quando não for possível, escolher outro integrante; **ninguém aprova a própria tarefa**.
+- O revisor verifica todos os itens do checklist e o critério de conclusão, diretamente no `.pbix`, no DAX, nos documentos ou no Drive. Se houver problemas, devolve para correção e depois revisa novamente.
+- Mover a tarefa para `Concluído` significa que a revisão foi aprovada; **não é necessário comentário de aprovação** nem print rotineiro.
+- Atividades expressamente marcadas como **revisão coletiva** no planejamento ou na Issue envolvem toda a squad, sem substituir a revisão individual das outras tarefas.
+- Usar a label `Impedida` somente quando houver bloqueio real, removendo-a após resolver o impedimento.
 
 ## Entrega oficial
 
-- Confirmar requisitos e prazo próprios de cada fase.
-- Publicar o painel pelo método exigido pelo bootcamp e disponibilizar o `.pbix` no Google Drive.
-- Testar ambos os links em janela anônima, sem login; guardar prints de publicação quando aplicável.
+- Conferir o prazo e os requisitos da fase.
+- Guardar o `.pbix` final no Google Drive e publicar o painel pelo método exigido no bootcamp.
+- Testar os dois links em janela anônima, sem login, e guardar prints de publicação quando exigidos.
