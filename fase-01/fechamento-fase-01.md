@@ -1,49 +1,17 @@
-# Fechamento da Fase 01 — Painel Comercial Rede Aurora
+# Fechamento da Fase 1 — Painel Aurora
 
-**Projeto:** Bootcamp Educadados — Rede Aurora Odontologia  
-**Entrega:** 07/11/2026  
-**Registro de encerramento:** 09/11/2026  
-**Situação:** Entregue; acesso à Fase 02 liberado.
+**Entrega original:** 07/11/2026, por Stephanne Leão na squad anterior. **Registro de encerramento:** 09/11/2026. A Squad 137 também realizou sua entrega em 09/11/2026, conforme o [registro de entrega](../entregas/fase-01.md).
 
-## 1. Entrega realizada
+## Resultado entregue
 
-Foi desenvolvido e entregue um relatório comercial no Power BI, organizado em duas páginas: **Visão Geral** e **Detalhamento**.
+Relatório comercial no Power BI, com duas páginas (**Visão Geral** e **Detalhamento**), incluindo vendas, metas e percentuais; gráficos de filial, cidades e grupos de serviço; matrizes de vendedores e profissionais; tabela de serviços; filtros de período, rótulos de valor e quantidade e formatação condicional.
 
-O painel contempla indicadores de vendas, metas, percentuais de atingimento, gráficos por filial, Top 10 cidades e grupos de serviço, além de matrizes de vendedores e profissionais e tabela de serviços.
+As fórmulas estão em [DAX da Fase 1](dax/README.md). A indicação **"sem meta"** na tabela de serviços utiliza medidas textuais separadas das numéricas; a formatação condicional da tabela foi feita nos visuais.
 
-Foram implementados filtros de período, formatação condicional nos percentuais das matrizes, rótulos combinados de valor e quantidade e apresentação de "sem meta" na tabela de serviços.
+## Limitação conhecida
 
-## 2. Medidas DAX documentadas
+Ao selecionar um grupo no gráfico de grupos de serviço, **o indicador percentual não atualizava como solicitado**. A causa não foi confirmada, e o problema não foi corrigido antes da entrega. A revisão futura deve considerar interações dos visuais, caminhos de filtro e contexto DAX.
 
-As medidas utilizadas no projeto estão registradas nos arquivos:
+Houve testes de modelo, cálculos e visuais, **mas não há registro de conclusão integral de todas as verificações planejadas**. Portanto, os totais consolidados, especialmente por grupo e serviço, **não devem ser considerados integralmente validados** apenas com base neste fechamento.
 
-- `dax/medidas-base.dax` — valor líquido, número de vendas, quantidade e valor bruto dos itens.
-- `dax/metas.dax` — metas nos níveis Produto, Serviço, Vendedor e Profissional, além das consolidações por filial, cidade e rede.
-- `dax/indicadores.dax` — percentuais de atingimento, status, cores e rótulo combinado.
-- `dax/exibicao.dax` — quatro medidas auxiliares de apresentação de "sem meta" na tabela de serviços.
-
-As medidas de exibição retornam texto. Os cálculos numéricos permanecem nas medidas originais.
-
-## 3. Implementação visual
-
-Na tabela de serviços, foram utilizadas quatro medidas auxiliares de exibição para apresentar valores formatados e a indicação "sem meta".
-
-A formatação condicional foi configurada diretamente nos visuais do Power BI, **sem utilização de medidas DAX de cor para a tabela de serviços**.
-
-Os gráficos por filial e cidade receberam rótulos combinados de valor e quantidade. As matrizes de vendedores e profissionais receberam formatação condicional nos percentuais.
-
-## 4. Validação e pendência técnica conhecida
-
-Foram realizados testes durante a construção do modelo, das medidas e dos visuais, mas não há registro de conclusão integral de todas as verificações previstas.
-
-**Pendência conhecida:** ao selecionar uma categoria no gráfico de grupos de serviço, o indicador percentual não atualizava conforme o comportamento solicitado no desafio. O problema não foi corrigido antes da entrega por restrição de tempo.
-
-**Causa não confirmada.** Uma investigação futura poderá avaliar as interações entre visuais, a direção de propagação dos filtros no modelo e o contexto das medidas DAX.
-
-A conferência integral dos totais consolidados, especialmente nos cortes de grupo de serviço e serviço, não deve ser considerada aprovada sem evidências adicionais.
-
-## 5. Encerramento
-
-A Fase 01 foi entregue em 07/11/2026, e o acesso à Fase 02 foi liberado. As tarefas dos dois Kanbans foram encerradas pela responsável.
-
-O fechamento administrativo registra o resultado da entrega e preserva as limitações técnicas conhecidas; não significa que todas tenham sido resolvidas.
+**Situação:** Fase 1 entregue e acesso à Fase 2 liberado. O encerramento administrativo não significa que a pendência técnica foi resolvida.
