@@ -60,11 +60,11 @@ A Fase 2 reutiliza os 11 arquivos da Fase 1 e acrescenta `orcamentos.xlsx`. Outr
 | `F02-19` | [Conferência coletiva da integração final](https://github.com/stephleao/educadados-aurora-squad137/issues/20) | 2 | F02-12 a F02-18 |
 | `F02-20` | [Validar as cinco perguntas no painel](https://github.com/stephleao/educadados-aurora-squad137/issues/21) | 3 | F02-07 a F02-11, F02-19 |
 | `F02-21` | [Testes finais](https://github.com/stephleao/educadados-aurora-squad137/issues/22) | 2 | F02-18 a F02-20 |
-| `F02-22` | [Publicação e links](https://github.com/stephleao/educadados-aurora-squad137/issues/23) | 2 | F02-19 a F02-21 |
-| `F02-23` | [Entrega oficial](https://github.com/stephleao/educadados-aurora-squad137/issues/24) | 1 | F02-22 |
+| `F02-22` | [Publicação e entrega oficial](https://github.com/stephleao/educadados-aurora-squad137/issues/23) | Consultar Project | F02-19, F02-20, F02-21, F02-24 |
+| `F02-23` | [Incorporada à F02-22; Issue encerrada](https://github.com/stephleao/educadados-aurora-squad137/issues/24) | — | — |
 | `F02-24` | [Documentação técnica](https://github.com/stephleao/educadados-aurora-squad137/issues/25) | 2 | F02-19, F02-20 |
 
-**Total:** 24 Issues e 64 pontos. Os detalhes e checklists estão nos corpos das Issues. Responsáveis permanecem indefinidos.
+**Total:** 23 Issues ativas; a `F02-23` foi incorporada à `F02-22` e encerrada para preservar o histórico. O esforço atual deve ser consultado nos campos do GitHub Project, inclusive após os ajustes da equipe. Os detalhes e checklists estão nos corpos das Issues. Responsáveis permanecem indefinidos.
 
 ## 5. Cronograma
 
@@ -78,26 +78,26 @@ A Fase 2 reutiliza os 11 arquivos da Fase 1 e acrescenta `orcamentos.xlsx`. Outr
 | 14–17/11 (sábado–terça) | Medidas DAX de atingimento, faixas, conversão, desconto, valor perdido e participação, em frentes paralelas | `F02-05` a `F02-11` |
 | 18–20/11 (quarta–sexta) | Construir e finalizar matrizes, cartões, funil, gráfico, alerta e segmentações; cada integrante testa e integra sua própria contribuição durante o desenvolvimento | `F02-12` a `F02-18` |
 | 21/11 (sábado) | Fazer a integração final e conferência coletiva do `.pbix`; validar as cinco perguntas de setembro/2026, executar testes gerais, corrigir defeitos e repetir os testes necessários | `F02-19`, `F02-20` e `F02-21` |
-| 22/11 (domingo) | Publicar o relatório, salvar o `.pbix` final no Google Drive, testar ambos os links em janela anônima e enviar a entrega | `F02-22` e `F02-23` |
+| 22/11 (domingo) | Publicar o relatório, salvar o `.pbix` final no Google Drive, testar ambos os links em janela anônima e realizar a entrega oficial | `F02-22` |
 | 23/11 (segunda) | Prazo oficial; usar apenas como contingência se houver impedimentos no dia 22 | — |
 
 A `F02-24` (documentação técnica) será realizada progressivamente e finalizada até **21/11**.
 
 **Marcos de conclusão sugeridos:**
 
-- **13/11:** `F02-01` a `F02-04` — 4 Issues, 12 pontos acumulados.
-- **17/11:** `F02-05` a `F02-11` — 11 Issues, 33 pontos acumulados.
-- **20/11:** `F02-12` a `F02-18` — 18 Issues, 50 pontos acumulados.
-- **21/11:** `F02-19`, `F02-20`, `F02-21` e `F02-24` — 22 Issues, 59 pontos acumulados.
-- **22/11:** `F02-22` e `F02-23` — 24 Issues, 64 pontos acumulados.
+- **13/11:** `F02-01` a `F02-04` — 4 Issues concluídas acumuladas.
+- **17/11:** `F02-05` a `F02-11` — 11 Issues concluídas acumuladas.
+- **20/11:** `F02-12` a `F02-18` — 18 Issues concluídas acumuladas.
+- **21/11:** `F02-19`, `F02-20`, `F02-21` e `F02-24` — 22 Issues concluídas acumuladas.
+- **22/11:** `F02-22` — 23 Issues ativas concluídas acumuladas; `F02-23` permanece encerrada como incorporada.
 
-Os pontos representam esforço relativo, não horas. As equipes podem antecipar visuais assim que suas medidas forem validadas, sem esperar o início formal da etapa seguinte.
+Os campos de esforço do Project representam esforço relativo, não horas, e são a fonte atualizada após os ajustes da equipe. Os integrantes podem antecipar visuais assim que suas medidas forem validadas, sem esperar o início formal da etapa seguinte.
 
 **Risco do cronograma:** a conferência da integração final, a validação e as correções compartilham o dia 21. Por isso, cada integrante deve integrar e testar suas medidas e visuais durante o desenvolvimento; no sábado, a equipe revisa o conjunto e resolve inconsistências. Problemas grandes descobertos no fim podem exigir a contingência de 23/11.
 
 **Dependências que podem atrasar a entrega:**
 
-- `F02-01` → `F02-02` → `F02-08` → `F02-10` → `F02-15` → `F02-18` → `F02-19` → `F02-20` → `F02-21` → `F02-22` → `F02-23`.
+- `F02-01` → `F02-02` → `F02-08` → `F02-10` → `F02-15` → `F02-18` → `F02-19` → `F02-20` → `F02-21` → `F02-22`.
 - `F02-03` → `F02-04` → `F02-11` → `F02-16` → `F02-18`.
 
 Essas sequências indicam bloqueios possíveis, não um caminho crítico calculado em horas.
