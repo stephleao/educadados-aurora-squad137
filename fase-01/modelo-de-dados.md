@@ -1,35 +1,16 @@
-# Referência do modelo de dados
+# Modelo de dados — Fase 1
 
-## Tabelas da Fase 01
+O modelo usa **11 tabelas**: quatro fatos (`vendas`, `itens_venda`, `metas_valor`, `metas_quantidade`) e sete dimensões (`calendario`, `cidades`, `filiais`, `profissionais`, `vendedores`, `grupos_servico`, `servicos`).
 
-| Tipo | Tabela | Chave principal |
-|---|---|---|
-| Fato | vendas | `codigo_venda` |
-| Fato | itens_venda | `codigo_item_venda` |
-| Fato | metas_valor | `codigo_meta_valor` |
-| Fato | metas_quantidade | `codigo_meta_quantidade` |
-| Dimensão | calendario | `data` |
-| Dimensão | cidades | `codigo_cidade` |
-| Dimensão | filiais | `codigo_filial` |
-| Dimensão | profissionais | `codigo_profissional` |
-| Dimensão | vendedores | `codigo_vendedor` |
-| Dimensão | grupos_servico | `codigo_grupo_servico` |
-| Dimensão | servicos | `codigo_servico` |
+Foram configurados os **22 relacionamentos** previstos no dicionário, com cardinalidade `*:1` e direção de filtro única: **18 ativos e 4 inativos**. Os quatro inativos evitam caminhos ambíguos:
 
-## Relacionamentos a conferir
-- `vendas[codigo_venda]` e `itens_venda[codigo_venda]`
-- `filiais[codigo_cidade]` e `cidades[codigo_cidade]`
-- `vendas[codigo_filial]` e `filiais[codigo_filial]`
-- `vendas[codigo_profissional]` e `profissionais[codigo_profissional]`
-- `vendas[codigo_vendedor]` e `vendedores[codigo_vendedor]`
-- `itens_venda[codigo_servico]` e `servicos[codigo_servico]`
-- `servicos[codigo_grupo_servico]` e `grupos_servico[codigo_grupo_servico]`
-- Vínculos de metas por filial, mês e entidade, conforme nível.
+- `profissionais[codigo_filial]` → `filiais[codigo_filial]`
+- `vendedores[codigo_filial]` → `filiais[codigo_filial]`
+- `metas_valor[codigo_grupo_servico]` → `grupos_servico[codigo_grupo_servico]`
+- `metas_quantidade[codigo_grupo_servico]` → `grupos_servico[codigo_grupo_servico]`
 
-**Importante:** os pares acima são referências de chaves descritas na base, **não uma instrução para criar todos como relacionamentos físicos ativos**. Consultar a aba `Relacionamentos` do arquivo `00_dicionario_de_dados.xlsx` para cardinalidade, direção, relacionamentos ativos/inativos e eventuais alternativas DAX. Evitar caminhos de filtro ambíguos e dupla contagem.
+**Atenção:** a relação entre `servicos` e `grupos_servico` permanece ativa. Metas de nível Produto precisam de tratamento específico no DAX por causa do caminho de filtros; não ativar indiscriminadamente as relações inativas.
 
-## Calendário
-Ordenar `mes_ano` por `ano_mes` e `mes_nome` por `mes_numero`. Testar filtros por mês e ano antes de criar visuais.
+O calendário foi marcado como tabela de datas; ordenar `mes_ano` por `ano_mes` e `mes_nome` por `mes_numero`.
 
-## Verificação
-Validar contagens por mês/filial, caminhos de filtro e coerência entre totais e detalhamentos antes de começar as metas.
+Para as chaves das 11 tabelas e o inventário das 22 ligações, consultar [análise do dicionário](f01-02-analise-dicionario-dados.md). Para as razões e testes das relações ativas/inativas, ver [configuração do modelo](f01-05-relacionamentos-modelo.md) e [validação do calendário/modelo](f01-06-07-validacao-calendario-modelo.md).
