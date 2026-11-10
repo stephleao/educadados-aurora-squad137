@@ -2,14 +2,14 @@
 
 Referência: enunciado do Desafio Fase 1 e descrição da base Educadados. **Não confundir número de vendas com quantidade de itens, nem valor líquido das vendas com valor bruto dos itens.**
 
-| Corte | Realizado em valor | Realizado em quantidade | Meta aplicável |
+| Corte | Valor realizado | Quantidade realizada | Regra da meta |
 |---|---|---|---|
-| Rede | `vendas[valor_liquido]` | Vendas distintas | Soma das metas das filiais |
-| Filial | Valor líquido das vendas | Vendas distintas | Valor: **Produto**; quantidade: **Vendedor** |
-| Cidade | Valor líquido das filiais | Vendas distintas | Soma das metas das filiais da cidade |
-| Vendedor | Valor líquido das vendas | Vendas distintas | Nível **Vendedor** |
-| Profissional | Valor líquido das vendas | Vendas distintas | Nível **Profissional** |
-| Grupo de serviço | `itens_venda[valor_total]` (bruto) | `itens_venda[quantidade]` | Nível **Produto** |
+| Rede | `vendas[valor_liquido]` | Número de vendas | Soma das metas das filiais |
+| Filial | Valor líquido | Número de vendas | Valor: nível **Produto**; quantidade: nível **Vendedor** |
+| Cidade | Valor líquido das filiais da cidade | Número de vendas | Soma das metas de suas filiais |
+| Vendedor | Valor líquido | Número de vendas | Nível **Vendedor** |
+| Profissional | Valor líquido | Número de vendas | Nível **Profissional** |
+| Grupo de serviço | `itens_venda[valor_total]` (bruto) | Soma de `itens_venda[quantidade]` | Nível **Produto** |
 | Serviço | Valor bruto dos itens | Quantidade de itens | Nível **Serviço** |
 
 ## Cuidados de cálculo
