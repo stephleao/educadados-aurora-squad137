@@ -20,7 +20,7 @@ A Fase 1 inclui um relatório comercial com até duas páginas, contendo:
 - Gráficos, matrizes, filtros por período, rótulos combinados e formatação condicional;
 - Indicação de "sem meta" na tabela de serviços.
 
-**Limitação técnica conhecida:** ao selecionar uma categoria do gráfico de grupos de serviço, o indicador percentual não atualizava conforme solicitado. A causa não foi confirmada. Ver [fechamento da Fase 1](docs/fechamento-fase-01.md).
+**Limitação técnica conhecida:** ao selecionar uma categoria do gráfico de grupos de serviço, o indicador percentual não atualizava conforme solicitado. A causa não foi confirmada. Ver [fechamento da Fase 1](fase-01/fechamento-fase-01.md).
 
 ### Fase 2 — Atingimento, orçamentos e composição das vendas
 
@@ -59,24 +59,53 @@ Fluxo de trabalho sugerido: **Backlog → A fazer → Em andamento → Em revis�
 
 Evitar a edição simultânea do mesmo arquivo PBIX. Arquivos de dados e relatórios Power BI são compartilhados em armazenamento externo, conforme as permissões definidas pela equipe.
 
-## Organização do repositório
+## Organização dos arquivos
 
-| Local | Conteúdo |
-|---|---|
-| `dax/` | Medidas DAX e documentação dos cálculos |
-| `docs/` | Regras de negócio, modelo, planejamento e registros técnicos |
-| `entrega/` | Checklists e links das entregas |
+### GitHub
+
+O repositório organiza a documentação e as medidas DAX separadamente por fase:
+
+- [`fase-01/`](fase-01/README.md) — arquivos e medidas da Fase 1, preservados como histórico.
+- [`fase-02/`](fase-02/README.md) — documentos e DAX da Fase 2.
+- [`entregas/`](entregas/fase-01.md) — checklists, links e evidências de cada entrega.
+
+As fases seguintes devem seguir o mesmo padrão. Os documentos anteriores não são reescritos como se fossem entregas da equipe atual.
+
+### Google Drive
+
+Os arquivos PBIX, as planilhas e os recursos visuais ficam na [pasta compartilhada da Squad 137](https://drive.google.com/drive/u/0/folders/1VJa4noEcfs4FtKLIBLxVfTSwJWF7dzUr):
+
+```text
+Fase 1/
+├── 01 WIP/
+└── 02 Entrega/
+Fase 2/
+├── 01 WIP/
+└── 02 Entrega/
+Logomarca/
+Base de dados/
+```
+
+- **01 WIP:** versões em desenvolvimento.
+- **02 Entrega:** arquivos finais apresentados ao bootcamp.
+- **Logomarca:** materiais de identidade visual.
+- **Base de dados:** planilhas originais e dados do desafio.
+
+O GitHub guarda documentação, DAX e histórico de alterações; o Drive guarda os arquivos de trabalho e de entrega do Power BI.
 
 ## Documentação e entregas
 
+- [Índice da Fase 1](fase-01/README.md)
+- [Índice da Fase 2](fase-02/README.md)
+
 ### Fase 1 — histórico
 
-- [Regras de negócio](docs/regras-de-negocio.md)
-- [Modelo de dados](docs/modelo-de-dados.md)
-- [Medidas DAX](dax/README.md)
-- [Fechamento da Fase 1](docs/fechamento-fase-01.md)
-- [Tarefas da Fase 1](docs/tarefas-desafio-fase-01.md)
-- [Checklist e links da entrega da Fase 1](entrega/README.md)
+- [Regras de negócio](fase-01/regras-de-negocio.md)
+- [Modelo de dados](fase-01/modelo-de-dados.md)
+- [Medidas DAX](fase-01/dax/README.md)
+- [Fechamento da Fase 1](fase-01/fechamento-fase-01.md)
+- [Tarefas da Fase 1](fase-01/tarefas-desafio-fase-01.md)
+- [Checklist e links da entrega da Fase 1](entregas/fase-01.md)
 - [Pasta da entrega da Fase 1](https://drive.google.com/drive/u/0/folders/1krieeIuUMqU_8z_QgoRmN4yuQf-jqyRC)
 
 ### Fase 2 — fontes do desafio

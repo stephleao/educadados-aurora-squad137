@@ -4,7 +4,7 @@
 **Entrega de Stephanne na squad anterior:** 07/11/2026.  
 **Entrega pela Squad 137:** 09/11/2026 (após o prazo original).
 
-> Checklist marcado como concluído conforme o fechamento informado pela responsável. A marcação não representa verificação independente de cada requisito ou teste de acesso anônimo aos links. Para as limitações técnicas conhecidas, consultar [fechamento da Fase 1](../docs/fechamento-fase-01.md).
+> Checklist marcado como concluído conforme o fechamento informado pela responsável. A marcação não representa verificação independente de cada requisito ou teste de acesso anônimo aos links. Para as limitações técnicas conhecidas, consultar [fechamento da Fase 1](../fase-01/fechamento-fase-01.md).
 
 - [x] Até duas páginas, com sete cortes e filtro de mês/ano
 - [x] Cartões de realizado, meta e percentuais
@@ -29,4 +29,4 @@
 
 **Nota sobre acesso:** o endereço do Power BI acima é um link de compartilhamento (`linkShare`), que não comprova por si só publicação aberta na web. O acesso sem login não foi validado nesta revisão. Confirmar as permissões dos dois links antes de reutilizá-los em outra entrega.
 
-**Nota técnica:** houve uma limitação não corrigida na atualização do percentual ao selecionar um grupo de serviço. A situação está registrada em [fechamento da Fase 1](../docs/fechamento-fase-01.md).
+**Nota técnica:** houve uma limitação não corrigida na atualização do percentual ao selecionar um grupo de serviço. A situação está registrada em [fechamento da Fase 1](../fase-01/fechamento-fase-01.md).
