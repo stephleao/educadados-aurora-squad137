@@ -5,14 +5,14 @@
 **Meta de entrega:** 22/11/2026, preferencialmente à tarde  
 **Prazo oficial:** 23/11/2026, às 23h59 (Brasília)
 
-O escopo e as fontes de dados estão no [README da Fase 2](README.md). A execução, as dependências de cada tarefa, os responsáveis, os revisores e os campos de acompanhamento ficam nas [Issues do Kanban](https://github.com/users/stephleao/projects/7/views/1), na milestone `Fase 2`. A `F02-23` foi incorporada à `F02-22` e encerrada; são **23 Issues ativas**.
+O escopo e as fontes de dados estão no [README da Fase 2](README.md). A execução, as dependências de cada tarefa, os responsáveis, os revisores e os campos de acompanhamento ficam nas [Issues do Kanban](https://github.com/users/stephleao/projects/7/views/1), na milestone `Fase 2`. A `F02-23` foi incorporada à `F02-22` e encerrada; a [Issue #31](https://github.com/stephleao/educadados-aurora-squad137/issues/31) foi criada com a identificação `F02-23`; são **24 Issues ativas**.
 
 ## Cronograma
 
 | Data | Entrega esperada | Issues |
 |---|---|---|
 | **11/11** | Reunião: distribuir tarefas, revisores e horários de edição | — |
-| **12–13/11** | Importar `orcamentos`, ajustar modelo e validar medidas herdadas e filtros | `F02-01` a `F02-04` |
+| **12–13/11** | Importar `orcamentos`, ajustar modelo e validar medidas herdadas e filtros | `F02-01` a `F02-04`, `F02-23` |
 | **14–17/11** | Criar e testar medidas de metas, orçamentos e participação | `F02-05` a `F02-11` |
 | **18–20/11** | Concluir visuais, alertas e segmentações; cada integrante testa e integra sua contribuição | `F02-12` a `F02-18` |
 | **21/11** | Integração coletiva, cinco perguntas, testes e correções | `F02-19` a `F02-21` |
