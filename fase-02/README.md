@@ -23,3 +23,9 @@ Evoluir o painel da Fase 1 com:
 - [Google Drive da equipe](https://drive.google.com/drive/u/0/folders/1VJa4noEcfs4FtKLIBLxVfTSwJWF7dzUr)
 
 As tarefas em andamento e sua conclusão devem ser consultadas no Kanban.
+
+## Ajuste técnico — Linhas em branco nas matrizes
+
+Durante a validação, foram identificados membros virtuais em branco nas matrizes de Profissionais e Serviços, confirmados pela comparação entre `VALUES()` e `DISTINCT()`. A origem específica nos relacionamentos não foi identificada.
+
+Foram aplicados filtros visuais para excluir nomes em branco, sem alterar os resultados das matrizes, as bases, os relacionamentos ou as medidas DAX.
