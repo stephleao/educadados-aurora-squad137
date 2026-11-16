@@ -1,0 +1,54 @@
+-- ==================================================
+-- F02-06 | Contagem de Filiais por Faixas
+-- Projeto: Painel Aurora - Fase 2
+-- Responsável: Elide
+-- Tabela no Power BI: _Medidas
+
+-- Finalidade: Iteração de contagem de filiais ativas
+-- por faixas de atingimento de metas.
+-- ==================================================
+
+Qtd Filiais Valor - 100% ou mais =
+CALCULATE(
+DISTINCTCOUNT(filiais[codigo_filial]),
+FILTER(
+VALUES(filiais[codigo_filial]),
+[Faixa Atingimento Valor] = "100% ou mais"
+)
+)
+
+Qtd Filiais Valor - 90 a 99 =
+CALCULATE(
+DISTINCTCOUNT(filiais[codigo_filial]),
+FILTER(
+VALUES(filiais[codigo_filial]),
+[Faixa Atingimento Valor] = "90% a menos de 100%"
+)
+)
+
+Qtd Filiais Valor - Abaixo 90 =
+CALCULATE(
+DISTINCTCOUNT(filiais[codigo_filial]),
+FILTER(
+VALUES(filiais[codigo_filial]),
+[Faixa Atingimento Valor] = "Abaixo de 90%"
+)
+)
+
+Qtd Filiais Valor - Sem Meta =
+CALCULATE(
+DISTINCTCOUNT(filiais[codigo_filial]),
+FILTER(
+VALUES(filiais[codigo_filial]),
+[Faixa Atingimento Valor] = "Sem Meta"
+)
+)
+
+Qtd Filiais Qtd - 100% ou mais =
+CALCULATE(
+DISTINCTCOUNT(filiais[codigo_filial]),
+FILTER(
+VALUES(filiais[codigo_filial]),
+[Faixa Atingimento Qtd] = "100% ou mais" -- Aqui muda para a medida de Qtd
+)
+)
