@@ -3,52 +3,114 @@
 -- Projeto: Painel Aurora - Fase 2
 -- Responsável: Elide
 -- Tabela no Power BI: _Medidas
-
--- Finalidade: Iteração de contagem de filiais ativas
--- por faixas de atingimento de metas.
+--
+-- Finalidade: contar filiais ativas, separadamente
+-- por faixa de atingimento de valor e quantidade.
+-- KEEPFILTERS preserva filtros existentes.
+-- Pressupõe filiais[unidade_ativa] como booleano,
+-- conforme as medidas testadas no PBIX.
 -- ==================================================
 
 Qtd Filiais Valor - 100% ou mais =
 CALCULATE(
-DISTINCTCOUNT(filiais[codigo_filial]),
-FILTER(
-VALUES(filiais[codigo_filial]),
-[Faixa Atingimento Valor] = "100% ou mais"
-)
+    DISTINCTCOUNT(filiais[codigo_filial]),
+    KEEPFILTERS(filiais[unidade_ativa] = TRUE()),
+    FILTER(
+        VALUES(filiais[codigo_filial]),
+        [Faixa Atingimento Valor] = "100% ou mais"
+    )
 )
 
 Qtd Filiais Valor - 90 a 99 =
 CALCULATE(
-DISTINCTCOUNT(filiais[codigo_filial]),
-FILTER(
-VALUES(filiais[codigo_filial]),
-[Faixa Atingimento Valor] = "90% a menos de 100%"
-)
+    DISTINCTCOUNT(filiais[codigo_filial]),
+    KEEPFILTERS(filiais[unidade_ativa] = TRUE()),
+    FILTER(
+        VALUES(filiais[codigo_filial]),
+        [Faixa Atingimento Valor] = "90% a menos de 100%"
+    )
 )
 
 Qtd Filiais Valor - Abaixo 90 =
 CALCULATE(
-DISTINCTCOUNT(filiais[codigo_filial]),
-FILTER(
-VALUES(filiais[codigo_filial]),
-[Faixa Atingimento Valor] = "Abaixo de 90%"
-)
+    DISTINCTCOUNT(filiais[codigo_filial]),
+    KEEPFILTERS(filiais[unidade_ativa] = TRUE()),
+    FILTER(
+        VALUES(filiais[codigo_filial]),
+        [Faixa Atingimento Valor] = "Abaixo de 90%"
+    )
 )
 
 Qtd Filiais Valor - Sem Meta =
 CALCULATE(
-DISTINCTCOUNT(filiais[codigo_filial]),
-FILTER(
-VALUES(filiais[codigo_filial]),
-[Faixa Atingimento Valor] = "Sem Meta"
-)
+    DISTINCTCOUNT(filiais[codigo_filial]),
+    KEEPFILTERS(filiais[unidade_ativa] = TRUE()),
+    FILTER(
+        VALUES(filiais[codigo_filial]),
+        [Faixa Atingimento Valor] = "Sem Meta"
+    )
 )
 
 Qtd Filiais Qtd - 100% ou mais =
 CALCULATE(
-DISTINCTCOUNT(filiais[codigo_filial]),
-FILTER(
-VALUES(filiais[codigo_filial]),
-[Faixa Atingimento Qtd] = "100% ou mais" -- Aqui muda para a medida de Qtd
+    DISTINCTCOUNT(filiais[codigo_filial]),
+    KEEPFILTERS(filiais[unidade_ativa] = TRUE()),
+    FILTER(
+        VALUES(filiais[codigo_filial]),
+        [Faixa Atingimento Qtd] = "100% ou mais"
+    )
 )
+
+Qtd Filiais Qtd - 90 a 99 =
+CALCULATE(
+    DISTINCTCOUNT(filiais[codigo_filial]),
+    KEEPFILTERS(filiais[unidade_ativa] = TRUE()),
+    FILTER(
+        VALUES(filiais[codigo_filial]),
+        [Faixa Atingimento Qtd] = "90% a menos de 100%"
+    )
 )
+
+Qtd Filiais Qtd - Abaixo 90 =
+CALCULATE(
+    DISTINCTCOUNT(filiais[codigo_filial]),
+    KEEPFILTERS(filiais[unidade_ativa] = TRUE()),
+    FILTER(
+        VALUES(filiais[codigo_filial]),
+        [Faixa Atingimento Qtd] = "Abaixo de 90%"
+    )
+)
+
+Qtd Filiais Qtd - Sem Meta =
+CALCULATE(
+    DISTINCTCOUNT(filiais[codigo_filial]),
+    KEEPFILTERS(filiais[unidade_ativa] = TRUE()),
+    FILTER(
+        VALUES(filiais[codigo_filial]),
+        [Faixa Atingimento Qtd] = "Sem Meta"
+    )
+)
+
+-- ==================================================
+-- VALIDAÇÃO | F02-06
+-- Período: setembro/2026; somente filiais ativas.
+--
+-- Evidência apresentada em tabela no Power BI:
+-- Contagem de unidade_ativa: 70 registros.
+-- Valor: 38 na faixa "90% a menos de 100%"
+--        e 32 na faixa "Abaixo de 90%".
+--        Total das faixas: 70.
+-- Quantidade: 63 na faixa "100% ou mais",
+--             2 na faixa "90% a menos de 100%",
+--             5 na faixa "Abaixo de 90%".
+--             Total das faixas: 70.
+-- Nos visuais apresentados, as demais faixas
+-- ficaram em branco, não indicando contagens.
+-- A responsável confirmou que nenhuma filial ativa
+-- aparece como "Não Classificado".
+--
+-- Ressalva: o visual de referência contou registros
+-- de unidade_ativa, não códigos distintos de filial.
+-- A verificação específica da unicidade de
+-- filiais[codigo_filial] não foi apresentada.
+-- ==================================================
