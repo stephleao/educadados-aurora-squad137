@@ -3,20 +3,36 @@
 -- Projeto: Painel Aurora - Fase 2
 -- Responsável: Elide
 -- Tabela no Power BI: _Medidas
-
--- Finalidade: Categorizar o atingimento das filiais.
--- Retorna texto para uso em apresentações e filtros.
+--
+-- Finalidade: classificar separadamente o atingimento
+-- das metas de valor e quantidade das filiais.
+-- Faixas: abaixo de 90%, de 90% até menos de 100%,
+-- e 100% ou mais, usando percentual não arredondado.
+-- Ausência de meta deve aparecer como "Sem Meta".
 -- ==================================================
+
+Faixa Atingimento Valor =
+VAR vMeta = [Meta Valor Filial]
+VAR vAtingimento = [% Atingimento Valor Filial]
+RETURN
+SWITCH(
+    TRUE(),
+    ISBLANK(vMeta), "Sem Meta",
+    vAtingimento >= 1, "100% ou mais",
+    vAtingimento >= 0.90, "90% a menos de 100%",
+    vAtingimento < 0.90, "Abaixo de 90%",
+    "Não Classificado" -- Tratamento de exceção para QA
+)
 
 Faixa Atingimento Qtd =
 VAR vMetaQtd = [Meta Quantidade Filial]
 VAR vAtingimentoQtd = [% Atingimento Qtd Filial]
 RETURN
 SWITCH(
-TRUE(),
-ISBLANK(vMetaQtd), "Sem Meta",
-vAtingimentoQtd >= 1, "100% ou mais",
-vAtingimentoQtd >= 0.90, "90% a menos de 100%",
-vAtingimentoQtd < 0.90, "Abaixo de 90%",
-"Não Classificado"
+    TRUE(),
+    ISBLANK(vMetaQtd), "Sem Meta",
+    vAtingimentoQtd >= 1, "100% ou mais",
+    vAtingimentoQtd >= 0.90, "90% a menos de 100%",
+    vAtingimentoQtd < 0.90, "Abaixo de 90%",
+    "Não Classificado"
 )
