@@ -1,0 +1,77 @@
+-- ==================================================
+-- F02-07 e F02-08 | Atingimento e orçamentos
+-- Projeto: Painel Aurora - Fase 2
+-- Responsável: Danielli Arçari
+-- Data original: 16/11/2026
+-- Fonte: Issues #8 e #9; arquivo original da autora.
+-- Fórmulas preservadas; documentação adicionada.
+-- ==================================================
+
+-- F02-07 | Classificação do atingimento das filiais
+-- 100% ou mais significa meta atingida.
+-- Retorna BLANK() se ambas as metas estão ausentes.
+-- Caso uma única meta esteja ausente, o comportamento
+-- depende dos percentuais; cenário não testado diretamente.
+
+Status Atingimento =
+SWITCH(
+TRUE(),
+ISBLANK([Meta Valor Filial]) && ISBLANK([Meta Quantidade Filial]), BLANK(),
+[% Atingimento Valor Filial] >= 1 && [% Atingimento Quantidade Filial] >= 1, "Ambas",
+[% Atingimento Valor Filial] >= 1, "Somente Valor",
+[% Atingimento Quantidade Filial] >= 1, "Somente Quantidade",
+"Nenhuma das metas"
+)
+
+-- F02-08 | Volume e conversão dos orçamentos
+-- Conta códigos distintos de orçamento por status.
+-- Conversão: orçamentos aprovados / gerados.
+-- A análise mensal depende do relacionamento do
+-- calendário com a data de criação do orçamento.
+
+Orçamentos Gerados =
+DISTINCTCOUNT(orcamentos[codigo_orcamento])
+
+Orçamentos Aprovados =
+CALCULATE(
+[Orçamentos Gerados],
+Orcamentos[Status] = "Aprovado"
+)
+
+Orçamentos Perdidos =
+CALCULATE(
+[Orçamentos Gerados],
+Orcamentos[Status] = "Perdido"
+)
+
+Taxa de Conversão =
+DIVIDE([Orçamentos Aprovados], [Orçamentos Gerados])
+
+-- Medidas também publicadas pela Dani, relacionadas à F02-09
+-- O desconto utiliza valores de vendas; confirmar
+-- adequação ao escopo da F02-09.
+-- Estas três medidas não foram validadas nesta revisão.
+
+Desconto Médio Ponderado =
+DIVIDE(
+[Valor Bruto de Itens] - [Valor Líquido],
+[Valor Bruto de Itens]
+)
+
+Valor Líquido Orçamentos = SUM(orcamentos[valor_liquido])
+
+Valor Perdido =
+CALCULATE(
+[Valor Líquido Orçamentos],
+orcamentos[status] = "Perdido"
+)
+
+-- VALIDAÇÃO
+-- F02-07: quatro classificações corretas nos testes
+-- de setembro/2026. Não foram encontradas filiais
+-- com metas em branco no contexto testado.
+-- Ausência de uma única meta não testada diretamente.
+--
+-- F02-08: os valores responderam aos filtros
+-- de mês e filial; tabelas consultadas consistentes.
+-- Totais numéricos de reconciliação não registrados.

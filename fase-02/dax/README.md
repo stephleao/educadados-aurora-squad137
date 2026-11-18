@@ -4,7 +4,29 @@ Esta pasta reúne as medidas criadas ou adaptadas para a Fase 2. Ao adicionar um
 
 As medidas anteriores estão em [Fase 1 — DAX](../../fase-01/dax/README.md) e devem ser validadas no novo modelo antes do uso.
 
-- [`participacao-grupos.dax`](participacao-grupos.dax): medidas de valor bruto total da rede e participação percentual dos grupos de serviço, desenvolvidas e testadas na `F02-04`.
-- [`exibicao.dax`](exibicao.dax): medidas `Faixa Atingimento Valor` e `Faixa Atingimento Qtd`, desenvolvidas por Elide Paixão na F02-05. Classificam o atingimento de valor e quantidade separadamente nas faixas abaixo de 90%, de 90% a menos de 100% e 100% ou mais, tratando metas ausentes como "Sem Meta".
+## Arquivos e tarefas
 
-- [`indicadores.dax`](indicadores.dax): oito medidas de contagem de filiais ativas por faixa de atingimento de valor e quantidade, desenvolvidas por Elide Paixão na F02-06. Utilizam `DISTINCTCOUNT` e `KEEPFILTERS` para respeitar os filtros. Validação realizada em setembro/2026, com soma de 70 registros em cada conjunto de faixas.
+- [`participacao-grupos.dax`](participacao-grupos.dax): medidas de valor bruto total da rede e participação percentual dos grupos de serviço, desenvolvidas e testadas na F02-04.
+
+- [`exibicao.dax`](exibicao.dax): medidas `Faixa Atingimento Valor` e `Faixa Atingimento Qtd`, desenvolvidas por Elide Paixão na F02-05. Classificam separadamente o atingimento de valor e quantidade, tratando metas ausentes como "Sem Meta".
+
+- [`indicadores.dax`](indicadores.dax): oito medidas de contagem de filiais ativas por faixa de atingimento de valor e quantidade, desenvolvidas por Elide Paixão na F02-06. Utilizam `DISTINCTCOUNT` e `KEEPFILTERS`. Validação de setembro/2026: soma de 70 registros em cada conjunto de faixas.
+
+- [`medidas-f02-07-08.dax`](medidas-f02-07-08.dax): oito medidas publicadas por Danielli Arçari em 16/11/2026.
+  - **F02-07:** `Status Atingimento`, classificação das filiais segundo o atingimento das metas de valor e quantidade.
+  - **F02-08:** `Orçamentos Gerados`, `Orçamentos Aprovados`, `Orçamentos Perdidos` e `Taxa de Conversão`.
+  - **Relacionadas à F02-09:** `Desconto Médio Ponderado`, `Valor Líquido Orçamentos` e `Valor Perdido`, ainda sujeitas à conferência da implementação final da tarefa.
+
+## Validação das F02-07 e F02-08
+
+- As quatro classificações de atingimento foram conferidas no Power BI, sem divergências observadas.
+- Não foram encontradas filiais com metas em branco no contexto testado.
+- As medidas de orçamentos responderam aos filtros de mês e filial.
+- Os resultados das tabelas de conferência foram consistentes.
+- A revisão independente pelo revisor indicado nas issues não foi confirmada neste registro.
+
+## Referências
+
+- [Issue #8 — F02-07](https://github.com/stephleao/educadados-aurora-squad137/issues/8)
+- [Issue #9 — F02-08](https://github.com/stephleao/educadados-aurora-squad137/issues/9)
+- [Issue #10 — F02-09](https://github.com/stephleao/educadados-aurora-squad137/issues/10)
