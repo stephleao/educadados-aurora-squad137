@@ -4,4 +4,4 @@ Esta pasta reúne as medidas criadas ou adaptadas para a Fase 2. Ao adicionar um
 
 As medidas anteriores estão em [Fase 1 — DAX](../../fase-01/dax/README.md) e devem ser validadas no novo modelo antes do uso.
 
-Ainda não há arquivos `.dax` específicos da Fase 2 nesta pasta.
+- [`participacao-grupos.dax`](participacao-grupos.dax): medidas de valor bruto total da rede e participação percentual dos grupos de serviço, desenvolvidas e testadas na `F02-04`.

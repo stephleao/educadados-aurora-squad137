@@ -1,0 +1,40 @@
+-- F02-04 | Participação dos grupos de serviço
+-- Projeto: Painel Aurora - Fase 2
+-- Responsável: Steph
+-- Tabela no Power BI: _Medidas
+--
+-- Finalidade: calcular a participação do valor bruto
+-- de um grupo de serviço no total bruto da rede.
+--
+-- Reutiliza [Valor Bruto de Itens] da Fase 1.
+-- O denominador ignora filtros de grupo, serviço,
+-- filial e cidade, mas preserva o período selecionado.
+
+
+Valor Bruto Total Rede =
+CALCULATE(
+    [Valor Bruto de Itens],
+    REMOVEFILTERS(grupos_servico),
+    REMOVEFILTERS(servicos),
+    REMOVEFILTERS(filiais),
+    REMOVEFILTERS(cidades)
+)
+
+
+% Participação Grupo Rede =
+DIVIDE(
+    [Valor Bruto de Itens],
+    [Valor Bruto Total Rede]
+)
+
+
+-- VALIDAÇÃO
+-- Período: setembro/2026.
+-- Sem filtro de grupo: participação de 100%.
+-- Com Clínica Geral: participação de 5,2%.
+-- O valor bruto total da rede permaneceu constante
+-- ao aplicar o filtro de grupo.
+--
+-- Testes realizados no Power BI com cartões
+-- temporários na página de validação.
+-- Exibir a medida percentual com uma casa decimal.
