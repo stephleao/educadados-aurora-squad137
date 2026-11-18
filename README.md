@@ -46,6 +46,7 @@ As responsabilidades da Fase 2 serão organizadas pela equipe.
 - [Kanban — Painel Aurora - Squad 137](https://github.com/users/stephleao/projects/7/views/1)
 - [Issues do repositório da Squad 137](https://github.com/stephleao/educadados-aurora-squad137/issues)
 - [Pasta de trabalho da Squad 137 no Google Drive](https://drive.google.com/drive/u/0/folders/1VJa4noEcfs4FtKLIBLxVfTSwJWF7dzUr)
+- [Layout do Painel Aurora no Figma](https://www.figma.com/design/LDOblJJ8KxFQ2SlVE4ycEh/Educadados---Aurora?node-id=22-7436)
 
 Fluxo de trabalho sugerido: **Backlog → A fazer → Em andamento → Em revisão → Concluído**.
 
