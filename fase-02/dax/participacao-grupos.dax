@@ -38,3 +38,51 @@ DIVIDE(
 -- Testes realizados no Power BI com cartões
 -- temporários na página de validação.
 -- Exibir a medida percentual com uma casa decimal.
+
+
+-- ==================================================
+-- F02-11 | Participação de serviços dentro do grupo
+-- Projeto: Painel Aurora - Fase 2
+-- Responsável: Steph
+-- Tabela no Power BI: _Medidas
+--
+-- Finalidade: calcular a participação percentual
+-- do valor bruto de cada serviço no valor bruto
+-- total de seu grupo.
+--
+-- Reutiliza [Valor Bruto de Itens].
+-- Remove apenas o filtro da coluna servico,
+-- preservando o contexto de grupo.
+-- ==================================================
+
+% Participação Serviço Grupo =
+DIVIDE(
+    [Valor Bruto de Itens],
+    CALCULATE(
+        [Valor Bruto de Itens],
+        REMOVEFILTERS(servicos[servico])
+    )
+)
+
+
+-- VALIDAÇÃO | F02-11
+-- Período: setembro/2026.
+--
+-- Grupo Protocolo:
+-- Valor bruto: R$ 3.277.550.
+-- Protocolo Superior: 30,59%.
+-- Soma dos quatro serviços: 100%.
+--
+-- Grupo Ortodontia (Aparelho Fixo):
+-- Valor bruto: R$ 2.714.640.
+-- Soma dos quatro serviços: 100%.
+--
+-- Os subtotais dos grupos exibidos
+-- apresentaram 100%.
+-- Filtros de período e filial testados.
+--
+-- A participação no total da rede utiliza
+-- [% Participação Grupo Rede] da F02-04.
+--
+-- Pendente: revisão independente.
+-- ==================================================

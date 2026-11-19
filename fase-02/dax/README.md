@@ -6,7 +6,10 @@ As medidas anteriores estão em [Fase 1 — DAX](../../fase-01/dax/README.md) e 
 
 ## Arquivos e tarefas
 
-- [`participacao-grupos.dax`](participacao-grupos.dax): medidas de valor bruto total da rede e participação percentual dos grupos de serviço, desenvolvidas e testadas na F02-04.
+- [`participacao-grupos.dax`](participacao-grupos.dax):
+  - **F02-04:** medidas `Valor Bruto Total Rede` e `% Participação Grupo Rede`, desenvolvidas por Steph. Calculam o valor bruto total da rede e a participação dos grupos de serviço.
+  - **F02-11:** medida `% Participação Serviço Grupo`, desenvolvida por Steph. Calcula a participação de cada serviço dentro do próprio grupo, preservando o contexto de grupo e utilizando valores brutos.
+  - **Validação F02-11:** os serviços de Protocolo e Ortodontia (Aparelho Fixo) totalizaram 100% em setembro/2026. Os filtros de período e filial foram testados. Revisão independente pendente.
 
 - [`exibicao.dax`](exibicao.dax): medidas `Faixa Atingimento Valor` e `Faixa Atingimento Qtd`, desenvolvidas por Elide Paixão na F02-05. Classificam separadamente o atingimento de valor e quantidade, tratando metas ausentes como "Sem Meta".
 
