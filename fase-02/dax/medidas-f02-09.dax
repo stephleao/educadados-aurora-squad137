@@ -1,0 +1,56 @@
+-- F02-09 | Desconto ponderado e valor perdido
+-- Projeto: Painel Aurora - Fase 2
+-- Responsável pela tarefa: Christian Farias
+-- Revisão: Steph
+--
+-- Medidas complementares coletadas do PBIX.
+-- Já documentadas no arquivo da Dani:
+-- [Valor Líquido Orçamentos], [Valor Perdido] e
+-- [Desconto Médio Ponderado].
+--
+-- A taxa abaixo considera descontos sobre
+-- os valores brutos dos orçamentos aprovados.
+
+Desconto Orcamentos =
+SUM(orcamentos[valor_desconto])
+
+
+Desconto Concedido =
+CALCULATE(
+    SUM(orcamentos[valor_desconto]),
+    orcamentos[status] = "Aprovado"
+)
+
+
+Valor Bruto Aprovado =
+CALCULATE(
+    SUM(orcamentos[valor_bruto]),
+    orcamentos[status] = "Aprovado"
+)
+
+
+Taxa Desconto Ponderado =
+DIVIDE(
+    [Desconto Concedido],
+    [Valor Bruto Aprovado]
+)
+
+
+% Perdido Sobre Vendido =
+DIVIDE(
+    [Valor Perdido],
+    [Valor Líquido]
+)
+
+
+-- VALIDAÇÃO
+-- Período: setembro/2026, todas as filiais.
+-- Desconto concedido: R$ 645.724,68.
+-- Valor bruto aprovado: R$ 8.005.755,00.
+-- Taxa ponderada: aproximadamente 8,07%.
+-- Valor perdido: R$ 2.164.467,81.
+-- Percentual perdido sobre vendido: aproximadamente 22,18%.
+-- A revisora confirmou testes de mês e filial.
+--
+-- A medida [Desconto Médio Ponderado] da Dani
+-- utiliza valores de vendas, não orçamentos aprovados.

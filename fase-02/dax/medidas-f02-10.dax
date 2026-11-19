@@ -1,0 +1,35 @@
+-- F02-10 | Conversão da rede
+-- Projeto: Painel Aurora - Fase 2
+-- Responsável pela tarefa: Christian Farias
+-- Revisão: Steph
+--
+-- A referência da rede é a conversão agregada:
+-- aprovados da rede / gerados da rede, não a
+-- média simples das taxas individuais.
+-- Reutiliza [Taxa de Conversão] da F02-08.
+
+Conversão da Rede =
+IF(
+    ISBLANK([Orçamentos Gerados]),
+    BLANK(),
+    CALCULATE(
+        [Taxa de Conversão],
+        REMOVEFILTERS(filiais),
+        REMOVEFILTERS(cidades)
+    )
+)
+
+
+Diferença vs Rede =
+[Taxa de Conversão] - [Conversão da Rede]
+
+
+-- VALIDAÇÃO
+-- Período: setembro/2026, todas as filiais.
+-- Orçamentos aprovados: 1.344.
+-- Orçamentos gerados: 3.976.
+-- Conversão da rede: aproximadamente 33,80%.
+-- Revisora confirmou que a referência permaneceu
+-- constante nos testes de filtros de filial.
+-- Não houve resultado em branco nos casos testados.
+-- Cenário de filial sem orçamentos não foi comprovado.

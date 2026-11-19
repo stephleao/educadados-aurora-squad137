@@ -17,6 +17,10 @@ As medidas anteriores estão em [Fase 1 — DAX](../../fase-01/dax/README.md) e 
   - **F02-08:** `Orçamentos Gerados`, `Orçamentos Aprovados`, `Orçamentos Perdidos` e `Taxa de Conversão`.
   - **Relacionadas à F02-09:** `Desconto Médio Ponderado`, `Valor Líquido Orçamentos` e `Valor Perdido`, ainda sujeitas à conferência da implementação final da tarefa.
 
+- [`medidas-f02-09.dax`](medidas-f02-09.dax): medidas complementares de desconto ponderado sobre orçamentos aprovados e percentual de valor perdido sobre vendas, relacionadas à F02-09 de Christian Farias. Reutiliza medidas já documentadas pela Dani. Testes de mês e filial realizados no Power BI.
+
+- [`medidas-f02-10.dax`](medidas-f02-10.dax): medidas `Conversão da Rede` e `Diferença vs Rede`, relacionadas à F02-10 de Christian Farias. Calculam a referência agregada da rede e sua diferença em relação à filial. Testes realizados no Power BI.
+
 ## Validação das F02-07 e F02-08
 
 - As quatro classificações de atingimento foram conferidas no Power BI, sem divergências observadas.
@@ -30,3 +34,4 @@ As medidas anteriores estão em [Fase 1 — DAX](../../fase-01/dax/README.md) e 
 - [Issue #8 — F02-07](https://github.com/stephleao/educadados-aurora-squad137/issues/8)
 - [Issue #9 — F02-08](https://github.com/stephleao/educadados-aurora-squad137/issues/9)
 - [Issue #10 — F02-09](https://github.com/stephleao/educadados-aurora-squad137/issues/10)
+- [Issue #11 — F02-10](https://github.com/stephleao/educadados-aurora-squad137/issues/11)
