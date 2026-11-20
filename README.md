@@ -24,7 +24,7 @@ A Fase 1 inclui um relatório comercial com até duas páginas, contendo:
 
 ### Fase 2 — Atingimento, orçamentos e composição das vendas
 
-**Situação:** em desenvolvimento · **Entrega planejada:** 22/11/2026 · **Prazo oficial:** 23/11/2026, às 23h59 (Brasília).
+**Situação:** em desenvolvimento · **Entrega planejada:** 26/11/2026 · **Prazo oficial:** 29/11/2026, às 23h59 (Brasília).
 
 Continuidade do painel comercial, com metas separadas de valor e quantidade, análise de orçamentos e participação dos grupos e serviços.
 

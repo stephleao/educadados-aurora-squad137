@@ -2,8 +2,8 @@
 
 **Reunião:** 11/11/2026, à noite  
 **Início:** 12/11/2026  
-**Meta de entrega:** 22/11/2026, preferencialmente à tarde  
-**Prazo oficial:** 23/11/2026, às 23h59 (Brasília)
+**Meta de entrega:** 26/11/2026  
+**Prazo oficial:** 29/11/2026, às 23h59 (Brasília)
 
 O escopo e as fontes de dados estão no [README da Fase 2](README.md). A execução, as dependências de cada tarefa, os responsáveis, os revisores e os campos de acompanhamento ficam nas [Issues do Kanban](https://github.com/users/stephleao/projects/7/views/1), na milestone `Fase 2`. A `F02-23` foi incorporada à `F02-22` e encerrada; a [Issue #31](https://github.com/stephleao/educadados-aurora-squad137/issues/31) foi criada com a identificação `F02-23`; consulte o Kanban para acompanhar a quantidade e a situação atual das Issues.
 
@@ -11,15 +11,21 @@ O escopo e as fontes de dados estão no [README da Fase 2](README.md). A execuç
 
 | Data | Entrega esperada | Issues |
 |---|---|---|
-| **11/11** | Reunião: distribuir tarefas, revisores e horários de edição | — |
-| **12–13/11** | Importar `orcamentos`, ajustar modelo e validar medidas herdadas e filtros | `F02-01` a `F02-04`, `F02-23` |
-| **14–17/11** | Criar e testar medidas de metas, orçamentos e participação | `F02-05` a `F02-11` |
-| **18–20/11** | Adaptar a Visão Geral, construir os novos visuais, alertas e segmentações; cada integrante testa e integra sua contribuição | `F02-12` a `F02-18`, `F02-26` |
-| **21/11** | Integração coletiva, cinco perguntas, testes e correções | `F02-19` a `F02-21` |
-| **22/11** | Publicar, testar links e enviar os dois links ao bootcamp | `F02-22` |
-| **23/11** | Concluir a documentação técnica; prazo oficial e contingência para o painel | `F02-24` |
+| **11/11** | Reunião: alinhar responsáveis, revisores e horários de edição | — |
+| **12–13/11** | Importar `orcamentos`, ajustar modelo e validar medidas herdadas e filtros | `F02-01` a `F02-04`, `F02-23` (#31) |
+| **14–18/11** | Criar e testar medidas de metas, orçamentos e participação | `F02-05` a `F02-11` |
+| **19–23/11** | Concluir visuais, testar e revisar individualmente cada contribuição | `F02-12` a `F02-18`, `F02-26` |
+| **24/11** | Integração coletiva, testes e validação das cinco perguntas | `F02-19` a `F02-21` |
+| **25/11** | Continuar integração e validação; corrigir problemas e repetir testes | `F02-19` a `F02-21` |
+| **26/11** | Publicar, testar os dois links e enviar a entrega | `F02-22` |
+| **27/11** | Concluir documentação técnica e manter contingência interna para o painel | `F02-24` |
+| **29/11** | Prazo oficial prorrogado da Fase 2 | — |
 
-A `F02-19` envolve toda a squad na conferência da integração, e a `F02-21` envolve toda a squad nos testes finais. As demais tarefas seguem a regra de revisor independente do guia. Os visuais podem começar assim que suas medidas estiverem validadas. **Atenção ao dia 21:** testes e correções ocorrerão no mesmo dia; cada pessoa deve testar seu trabalho antes, para evitar descobertas tardias. A documentação (`F02-24`) deve ser atualizada progressivamente e pode ser finalizada até **23/11**. A parte necessária para enviar os links deve estar pronta na entrega de **22/11**.
+A `F02-19` envolve toda a squad na conferência da integração, e a `F02-21` envolve toda a squad nos testes finais. As demais tarefas seguem a regra de revisor independente do guia.
+
+**Atenção aos dias 24 e 25:** a integração, os testes e as correções compartilham esses dois dias; cada pessoa deve testar seu trabalho antes, para evitar descobertas tardias.
+
+A documentação (`F02-24`) deve ser atualizada progressivamente e pode ser finalizada até **27/11**. A parte necessária para enviar os links deve estar pronta na entrega de **26/11**.
 
 ## Organização do painel
 
@@ -63,7 +69,9 @@ A resposta deve ser obtida pelo próprio painel; um documento `.md` com resposta
 - Corrigir os problemas encontrados e repetir os testes necessários.
 - Salvar `Aurora_squad_137_f02_final.pbix` em `Fase 2/02 Entrega` no Google Drive.
 - Publicar no Power BI, testar os dois links sem login e guardar prints da publicação.
-- Submeter os dois links ao bootcamp, preferencialmente em **22/11** (prazo oficial: **23/11 às 23h59**, Brasília).
-- Finalizar a documentação técnica (`F02-24`) até **23/11**, sem bloquear a entrega do dia 22.
+- Submeter os dois links ao bootcamp, preferencialmente até **26/11**.
+- Finalizar a documentação técnica (`F02-24`) até **27/11**, sem bloquear a entrega do dia 26.
+
+**Prazo oficial prorrogado:** 29/11/2026, às 23h59 (Brasília). O período restante é reservado para contingências.
 
 As regras de armazenamento, revisão independente e uso do GitHub estão no [guia de colaboração](../GUIA_COLABORACAO.md).
