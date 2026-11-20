@@ -1,6 +1,6 @@
 # Fase 2 — Atingimento, orçamentos e composição das vendas
 
-**Squad 137** · **Entrega planejada:** 26/11/2026 · **Prazo oficial:** 29/11/2026 (horário a confirmar)
+**Squad 137** · **Entrega planejada:** 26/11/2026 · **Prazo oficial:** 29/11/2026, às 23h59 (Brasília)
 
 ## Escopo
 
