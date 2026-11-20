@@ -3,7 +3,7 @@
 **Reunião:** 11/11/2026, à noite  
 **Início:** 12/11/2026  
 **Meta de entrega:** 26/11/2026  
-**Prazo oficial prorrogado:** 29/11/2026 (horário a confirmar)
+**Prazo oficial:** 29/11/2026, às 23h59 (Brasília)
 
 O escopo e as fontes de dados estão no [README da Fase 2](README.md). A execução, as dependências de cada tarefa, os responsáveis, os revisores e os campos de acompanhamento ficam nas [Issues do Kanban](https://github.com/users/stephleao/projects/7/views/1), na milestone `Fase 2`. A `F02-23` foi incorporada à `F02-22` e encerrada; a [Issue #31](https://github.com/stephleao/educadados-aurora-squad137/issues/31) foi criada com a identificação `F02-23`; consulte o Kanban para acompanhar a quantidade e a situação atual das Issues.
 
@@ -21,9 +21,11 @@ O escopo e as fontes de dados estão no [README da Fase 2](README.md). A execuç
 | **27/11** | Concluir documentação técnica e manter contingência interna para o painel | `F02-24` |
 | **29/11** | Prazo oficial prorrogado da Fase 2 | — |
 
-A `F02-19` envolve toda a squad na conferência da integração, e a `F02-21` envolve toda a squad nos testes finais. As demais tarefas seguem a revisão independente do guia. A `F02-26` (Visão Geral) já foi informada como concluída; **a conclusão dos demais visuais depende de desenvolvimento e revisão**, mesmo que alguma Issue tenha sido fechada por engano no Kanban.
+A `F02-19` envolve toda a squad na conferência da integração, e a `F02-21` envolve toda a squad nos testes finais. As demais tarefas seguem a regra de revisor independente do guia.
 
-A integração e os testes estão concentrados em **24 e 25/11**, por isso cada responsável deve conferir sua contribuição antes dessa etapa. A documentação (`F02-24`) deve ser atualizada progressivamente e finalizada até **27/11**. Os materiais indispensáveis à submissão precisam estar prontos em **26/11**, quando a equipe pretende entregar o painel.
+**Atenção aos dias 24 e 25:** a integração, os testes e as correções compartilham esses dois dias; cada pessoa deve testar seu trabalho antes, para evitar descobertas tardias.
+
+A documentação (`F02-24`) deve ser atualizada progressivamente e pode ser finalizada até **27/11**. A parte necessária para enviar os links deve estar pronta na entrega de **26/11**.
 
 ## Organização do painel
 
@@ -62,14 +64,14 @@ A resposta deve ser obtida pelo próprio painel; um documento `.md` com resposta
 
 ## Lista de encerramento
 
-- Concluir os visuais e revisar individualmente as contribuições até **23/11**.
-- Realizar a conferência coletiva da integração (`F02-19`), validar as cinco perguntas de setembro/2026 (`F02-20`) e executar os testes finais com toda a squad (`F02-21`) em **24 e 25/11**.
+- Conferir os requisitos, as segmentações e as cinco perguntas de setembro/2026.
+- Realizar a conferência coletiva da integração (`F02-19`) e os testes finais com toda a squad (`F02-21`).
 - Corrigir os problemas encontrados e repetir os testes necessários.
 - Salvar `Aurora_squad_137_f02_final.pbix` em `Fase 2/02 Entrega` no Google Drive.
 - Publicar no Power BI, testar os dois links sem login e guardar prints da publicação.
-- Enviar os dois links ao bootcamp até **26/11**, nossa meta interna.
-- Finalizar a documentação técnica (`F02-24`) até **27/11**, sem bloquear a entrega prevista para 26/11.
+- Submeter os dois links ao bootcamp, preferencialmente até **26/11**.
+- Finalizar a documentação técnica (`F02-24`) até **27/11**, sem bloquear a entrega do dia 26.
 
-**Prazo oficial prorrogado:** 29/11/2026 (horário a confirmar). O período restante é reservado para contingências.
+**Prazo oficial prorrogado:** 29/11/2026, às 23h59 (Brasília). O período restante é reservado para contingências.
 
 As regras de armazenamento, revisão independente e uso do GitHub estão no [guia de colaboração](../GUIA_COLABORACAO.md).
