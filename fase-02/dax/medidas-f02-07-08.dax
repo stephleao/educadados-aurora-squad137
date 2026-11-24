@@ -13,11 +13,15 @@
 -- Caso uma única meta esteja ausente, o comportamento
 -- depende dos percentuais; cenário não testado diretamente.
 
+-- F02-12: rótulo "Ambas as metas" padronizado
+-- para compatibilidade com a segmentação
+-- de situação de atingimento.
+
 Status Atingimento =
 SWITCH(
 TRUE(),
 ISBLANK([Meta Valor Filial]) && ISBLANK([Meta Quantidade Filial]), BLANK(),
-[% Atingimento Valor Filial] >= 1 && [% Atingimento Quantidade Filial] >= 1, "Ambas",
+[% Atingimento Valor Filial] >= 1 && [% Atingimento Quantidade Filial] >= 1, "Ambas as metas",
 [% Atingimento Valor Filial] >= 1, "Somente Valor",
 [% Atingimento Quantidade Filial] >= 1, "Somente Quantidade",
 "Nenhuma das metas"

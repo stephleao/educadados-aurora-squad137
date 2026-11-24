@@ -24,6 +24,13 @@ As medidas anteriores estão em [Fase 1 — DAX](../../fase-01/dax/README.md) e 
 
 - [`medidas-f02-10.dax`](medidas-f02-10.dax): medidas `Conversão da Rede` e `Diferença vs Rede`, relacionadas à F02-10 de Christian Farias. Calculam a referência agregada da rede e sua diferença em relação à filial. Testes realizados no Power BI.
 
+- [`medidas-f02-12.dax`](medidas-f02-12.dax):
+  - **F02-12:** tabela auxiliar `Filtro Situacao Atingimento` e medida `Exibir Filial Ating`, desenvolvidas por Steph.
+  - Permitem filtrar dinamicamente a matriz de atingimento das filiais conforme a situação selecionada, reutilizando a medida `Status Atingimento` da F02-07.
+  - Inclui a configuração da matriz e a formatação condicional dos percentuais.
+  - **Validação:** testadas todas as opções do filtro de situação e as segmentações de período e filial. Conferida a coerência dos percentuais, classificações e totais no cenário de Somente Valor.
+  - **Ressalva técnica:** o tratamento de ausência parcial de metas e de metas iguais a zero permanece como ponto de revisão futura. Essa ressalva não altera a regra anual de ausência de cadastro de metas da F02-17.
+
 ## Validação das F02-07 e F02-08
 
 - As quatro classificações de atingimento foram conferidas no Power BI, sem divergências observadas.
@@ -38,3 +45,4 @@ As medidas anteriores estão em [Fase 1 — DAX](../../fase-01/dax/README.md) e 
 - [Issue #9 — F02-08](https://github.com/stephleao/educadados-aurora-squad137/issues/9)
 - [Issue #10 — F02-09](https://github.com/stephleao/educadados-aurora-squad137/issues/10)
 - [Issue #11 — F02-10](https://github.com/stephleao/educadados-aurora-squad137/issues/11)
+- [Issue #13 — F02-12](https://github.com/stephleao/educadados-aurora-squad137/issues/13)

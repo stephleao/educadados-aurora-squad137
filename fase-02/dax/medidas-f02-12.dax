@@ -1,0 +1,152 @@
+-- ==================================================
+-- F02-12 | Matriz de atingimento das filiais
+-- Projeto: Painel Aurora - Fase 2
+-- Responsável: Steph
+-- Fonte: Issue #13
+--
+-- Finalidade: permitir a análise independente do
+-- atingimento das metas de valor e quantidade por
+-- filial, com filtro dinâmico de situação.
+--
+-- Dependências: F02-05 e F02-07.
+-- ==================================================
+
+
+-- TABELA AUXILIAR
+-- Criada em Modelagem > Nova tabela.
+--
+-- Tabela desconectada, utilizada exclusivamente
+-- para disponibilizar as opções da segmentação
+-- de situação de atingimento.
+--
+-- Não criar relacionamentos com outras tabelas.
+-- Classificar Situacao pela coluna Ordem.
+
+Filtro Situacao Atingimento =
+DATATABLE(
+    "Situacao", STRING,
+    "Ordem", INTEGER,
+    {
+        {"Todas", 1},
+        {"Ambas as metas", 2},
+        {"Somente Valor", 3},
+        {"Somente Quantidade", 4},
+        {"Nenhuma das metas", 5}
+    }
+)
+
+
+-- MEDIDA DE CONTROLE DO FILTRO
+-- Finalidade: determinar quais filiais devem ser
+-- exibidas na matriz de acordo com a situação
+-- selecionada pelo usuário.
+--
+-- Reutiliza a medida Status Atingimento da F02-07.
+-- Retorna 1 para exibir e 0 para ocultar a filial.
+--
+-- Aplicar em Filtros neste visual, igual a 1.
+
+Exibir Filial Ating =
+VAR Selecao =
+    SELECTEDVALUE(
+        'Filtro Situacao Atingimento'[Situacao],
+        "Todas"
+    )
+VAR StatusAtual =
+    [Status Atingimento]
+RETURN
+    IF(
+        Selecao = "Todas"
+            || Selecao = StatusAtual,
+        1,
+        0
+    )
+
+
+-- ==================================================
+-- CONFIGURAÇÃO DO VISUAL
+--
+-- Página: Atingimento
+-- Visual: matriz de detalhamento dos atingimentos.
+--
+-- Linhas: identificação da filial.
+--
+-- Valores:
+-- [Valor Líquido]
+-- [Meta Valor Filial]
+-- [% Atingimento Valor Filial]
+-- [Número de Vendas]
+-- [Meta Quantidade Filial]
+-- [% Atingimento Quantidade Filial]
+-- [Status Atingimento]
+--
+-- Formatação condicional dos percentuais:
+-- Abaixo de 90%: vermelho, ícone de não atingimento.
+-- De 90% a menos de 100%: ícone de atenção.
+-- 100% ou mais: verde, ícone de confirmação.
+--
+-- Faixas avaliadas sem arredondamento prévio.
+--
+-- Segmentação:
+-- Filtro Situacao Atingimento[Situacao]
+-- Seleção única.
+--
+-- Filtro da matriz:
+-- [Exibir Filial Ating] = 1
+-- ==================================================
+
+
+-- ==================================================
+-- VALIDAÇÃO
+--
+-- Testadas todas as opções da segmentação
+-- de situação e alterações de período.
+--
+-- Conferida a coerência entre os percentuais,
+-- ícones e classificação das filiais.
+--
+-- No cenário testado de Somente Valor,
+-- foram exibidas seis filiais que atingiram
+-- a meta de valor, mas não a de quantidade.
+--
+-- Total do cenário:
+-- Valor líquido: R$ 873.252
+-- Meta de valor: R$ 823.768
+-- Atingimento de valor: 106,0%
+-- Número de vendas: 157
+-- Meta de quantidade: 207
+-- Atingimento de quantidade: 75,8%
+--
+-- Os totais foram coerentes com as filiais
+-- exibidas nesse cenário.
+--
+-- A segmentação específica de filial foi testada
+-- e apresentou funcionamento adequado.
+--
+-- As medidas temporárias de diagnóstico foram
+-- removidas após a conclusão dos testes.
+-- ==================================================
+
+
+-- ==================================================
+-- RESSALVA TÉCNICA | REVISÃO FUTURA
+--
+-- A medida Status Atingimento, herdada da F02-07,
+-- retorna BLANK() quando ambas as metas estão
+-- ausentes no período selecionado.
+--
+-- A ausência de apenas uma das metas ainda pode
+-- resultar em classificação como não atingimento.
+--
+-- Recomenda-se revisar posteriormente:
+-- - Ausência parcial de metas.
+-- - Distinção entre meta ausente e meta igual a zero.
+-- - Exibição dos casos sem meta na matriz.
+--
+-- A lógica original foi preservada nesta tarefa,
+-- exceto pela padronização do rótulo "Ambas as metas".
+--
+-- Esta ressalva refere-se ao período selecionado
+-- na matriz e não altera a regra anual de ausência
+-- de cadastro de metas da página de Alertas (F02-17).
+-- ==================================================
