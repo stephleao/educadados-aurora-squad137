@@ -150,3 +150,30 @@ RETURN
 -- na matriz e não altera a regra anual de ausência
 -- de cadastro de metas da página de Alertas (F02-17).
 -- ==================================================
+
+-- ==================================================
+-- INTEGRAÇÃO COM F02-13
+--
+-- A matriz de atingimento e a segmentação de
+-- situação foram integradas ao PBIX da Danielli,
+-- junto aos gráficos e cartões da F02-13.
+--
+-- Foram compatibilizados os rótulos das medidas
+-- compartilhadas de classificação e contagem.
+--
+-- Testados os filtros de período, filial e
+-- situação de atingimento no arquivo integrado.
+--
+-- Em setembro/2026, os gráficos de valor e
+-- quantidade totalizaram 70 filiais cada.
+--
+-- Indicadores de atingimento exclusivo:
+-- Somente Valor: 6 filiais.
+-- Somente Quantidade: 12 filiais.
+--
+-- Consultar medidas-f02-13.dax para a
+-- documentação dos indicadores.
+--
+-- A ressalva de tratamento de metas ausentes
+-- permanece registrada para revisão futura.
+-- ==================================================

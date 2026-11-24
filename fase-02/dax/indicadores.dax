@@ -27,7 +27,7 @@ CALCULATE(
     KEEPFILTERS(filiais[unidade_ativa] = TRUE()),
     FILTER(
         VALUES(filiais[codigo_filial]),
-        [Faixa Atingimento Valor] = "90% a menos de 100%"
+        [Faixa Atingimento Valor] = "90% a 99%"
     )
 )
 
@@ -67,7 +67,7 @@ CALCULATE(
     KEEPFILTERS(filiais[unidade_ativa] = TRUE()),
     FILTER(
         VALUES(filiais[codigo_filial]),
-        [Faixa Atingimento Qtd] = "90% a menos de 100%"
+        [Faixa Atingimento Qtd] = "90% a 99%"
     )
 )
 
@@ -113,4 +113,26 @@ CALCULATE(
 -- de unidade_ativa, não códigos distintos de filial.
 -- A verificação específica da unicidade de
 -- filiais[codigo_filial] não foi apresentada.
+-- ==================================================
+
+-- ==================================================
+-- VALIDAÇÃO APÓS INTEGRAÇÃO | F02-12 E F02-13
+-- Período: setembro/2026.
+--
+-- Valor:
+-- 100% ou mais: 40 filiais.
+-- 90% a 99%: 30 filiais.
+-- Abaixo de 90%: 0 filiais.
+-- Sem Meta: 0 filiais.
+-- Total: 70 filiais.
+--
+-- Quantidade:
+-- 100% ou mais: 46 filiais.
+-- 90% a 99%: 18 filiais.
+-- Abaixo de 90%: 6 filiais.
+-- Sem Meta: 0 filiais.
+-- Total: 70 filiais.
+--
+-- Resultados observados nos gráficos do PBIX
+-- integrado, após a padronização dos rótulos.
 -- ==================================================

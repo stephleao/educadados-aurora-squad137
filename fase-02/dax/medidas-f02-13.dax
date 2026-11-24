@@ -1,0 +1,146 @@
+-- ==================================================
+-- F02-13 | Indicadores de faixas de atingimento
+-- Projeto: Painel Aurora - Fase 2
+-- Responsável: Danielli Arçari
+-- Integração: Steph
+-- Fonte: Issue #14 e comentário da autora.
+--
+-- Finalidade: apresentar contagens de filiais
+-- por faixa de atingimento e destacar filiais
+-- que atingiram somente uma das duas metas.
+--
+-- Dependências: F02-06 e F02-07.
+-- ==================================================
+
+
+-- TABELA AUXILIAR
+-- Tabela desconectada utilizada como categoria
+-- dos gráficos de atingimento.
+--
+-- Classificar Faixa pela coluna Ordem.
+-- O rótulo intermediário foi padronizado durante
+-- a integração das tarefas F02-12 e F02-13.
+
+dFaixas =
+DATATABLE(
+    "Faixa", STRING,
+    "Ordem", INTEGER,
+    {
+        {"100% ou mais", 1},
+        {"90% a 99%", 2},
+        {"Abaixo de 90%", 3},
+        {"Sem Meta", 4}
+    }
+)
+
+
+-- GRÁFICOS POR FAIXA
+-- Selecionam a medida de contagem correspondente
+-- à categoria do gráfico.
+-- O + 0 converte resultados em branco para zero.
+
+Gráfico Faixas Valor =
+SWITCH(
+    SELECTEDVALUE(dFaixas[Faixa]),
+    "100% ou mais", [Qtd Filiais Valor - 100% ou mais],
+    "90% a 99%", [Qtd Filiais Valor - 90 a 99],
+    "Abaixo de 90%", [Qtd Filiais Valor - Abaixo 90],
+    "Sem Meta", [Qtd Filiais Valor - Sem Meta]
+) + 0
+
+
+Gráfico Faixas Quantidade =
+SWITCH(
+    SELECTEDVALUE(dFaixas[Faixa]),
+    "100% ou mais", [Qtd Filiais Qtd - 100% ou mais],
+    "90% a 99%", [Qtd Filiais Qtd - 90 a 99],
+    "Abaixo de 90%", [Qtd Filiais Qtd - Abaixo 90],
+    "Sem Meta", [Qtd Filiais Qtd - Sem Meta]
+) + 0
+
+
+-- INDICADORES DE ATINGIMENTO EXCLUSIVO
+-- Medidas originalmente desenvolvidas por Danielli.
+--
+-- Durante a integração, Steph acrescentou
+-- KEEPFILTERS para restringir as contagens às
+-- filiais ativas, preservando os demais filtros.
+--
+-- A alteração mantém o mesmo universo de análise
+-- das medidas de contagem por faixa da F02-06.
+
+Qtd Filiais - Somente Valor =
+CALCULATE(
+    COUNTROWS(
+        FILTER(
+            VALUES(filiais[codigo_filial]),
+            [Status Atingimento] = "Somente Valor"
+        )
+    ),
+    KEEPFILTERS(filiais[unidade_ativa] = TRUE())
+) + 0
+
+
+Qtd Filiais - Somente Quantidade =
+CALCULATE(
+    COUNTROWS(
+        FILTER(
+            VALUES(filiais[codigo_filial]),
+            [Status Atingimento] = "Somente Quantidade"
+        )
+    ),
+    KEEPFILTERS(filiais[unidade_ativa] = TRUE())
+) + 0
+
+
+-- ==================================================
+-- CONFIGURAÇÃO DOS VISUAIS
+--
+-- Página: Atingimento.
+--
+-- Gráfico de valor:
+-- Categoria: dFaixas[Faixa].
+-- Valores: [Gráfico Faixas Valor].
+--
+-- Gráfico de quantidade:
+-- Categoria: dFaixas[Faixa].
+-- Valores: [Gráfico Faixas Quantidade].
+--
+-- Cartões:
+-- [Qtd Filiais - Somente Valor].
+-- [Qtd Filiais - Somente Quantidade].
+--
+-- Integrados à matriz de atingimento da F02-12.
+-- ==================================================
+
+
+-- ==================================================
+-- VALIDAÇÃO DA INTEGRAÇÃO
+-- Período: setembro/2026.
+--
+-- Faixa                  Valor    Quantidade
+-- 100% ou mais             40          46
+-- 90% a 99%                30          18
+-- Abaixo de 90%             0           6
+-- Sem Meta                  0           0
+-- Total                    70          70
+--
+-- Somente Valor: 6 filiais.
+-- Somente Quantidade: 12 filiais.
+--
+-- Testadas as segmentações de período e filial
+-- durante a integração com a F02-12.
+--
+-- As contagens dos gráficos totalizaram 70
+-- filiais em cada conjunto de faixas.
+-- ==================================================
+
+
+-- ==================================================
+-- RESSALVA TÉCNICA
+--
+-- O tratamento de ausência parcial de metas e
+-- de metas iguais a zero permanece como ponto
+-- de revisão futura, conforme documentação
+-- da F02-12.
+-- ==================================================
