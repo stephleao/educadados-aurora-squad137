@@ -30,6 +30,14 @@ Continuidade do painel comercial, com metas separadas de valor e quantidade, an�
 
 [Escopo, fontes e documentos da Fase 2](fase-02/README.md) · [Planejamento](fase-02/planejamento-fase-02.md)
 
+### Fase 3 — Tempo: ritmo, projeção e comparativos
+
+**Situação:** em planejamento · **Meta interna de entrega:** 06/12/2026 · **Prazo oficial:** 07/12/2026, às 23h59 (Brasília).
+
+Evolução do Painel Aurora com projeção de fechamento baseada no calendário de cada filial, data de corte, comparativos temporais, curva ABC de serviços e análise de desempenho dos vendedores.
+
+[Escopo e fontes da Fase 3](fase-03/README.md) · [Planejamento](fase-03/planejamento-fase-03.md)
+
 ## Equipe — Squad 137
 
 | Integrante | GitHub | LinkedIn |
@@ -62,6 +70,7 @@ O repositório organiza a documentação e as medidas DAX separadamente por fase
 
 - [`fase-01/`](fase-01/README.md) — arquivos e medidas da Fase 1, preservados como histórico.
 - [`fase-02/`](fase-02/README.md) — documentos e DAX da Fase 2.
+- [`fase-03/`](fase-03/README.md) — documentos e medidas DAX da Fase 3.
 - [`entregas/`](entregas/fase-01.md) — checklists, links e evidências de cada entrega.
 
 As fases seguintes devem seguir o mesmo padrão. Os documentos anteriores não são reescritos como se fossem entregas da equipe atual.
@@ -92,6 +101,7 @@ O GitHub guarda documentação, DAX e histórico de alterações; o Drive guarda
 
 - [Índice da Fase 1](fase-01/README.md)
 - [Índice da Fase 2](fase-02/README.md)
+- [Índice da Fase 3](fase-03/README.md)
 
 ### Fase 1 — histórico
 
